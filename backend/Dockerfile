@@ -12,7 +12,7 @@ RUN go mod download || true
 COPY . .
 
 # Build executable
-RUN CGO_ENABLED=0 GOOS=linux go build -o /app/server ./cmd/server/main.go
+RUN CGO_ENABLED=0 GOOS=linux go build -o /app/server ./cmd/08_server/main.go
 
 # Runtime stage
 FROM alpine:3.21
